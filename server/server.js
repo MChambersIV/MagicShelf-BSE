@@ -1,9 +1,8 @@
 const express = require('express');
 const path = require('path');
 const { ApolloServer } = require('apollo-server-express');
-const routes = require('./routes');
 
-const { typeDefs, resolvers } = require('.schemas');
+const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
 
 const app = express();
@@ -26,7 +25,6 @@ const startApolloServer = async (typeDefs, resolvers) => {
   await server.start();
   server.applyMiddleware({ app });
 }
-app.use(routes);
 
 db.once('open', () => {
   app.listen(PORT, () => console.log(`🌍 Now listening on localhost:${PORT}`));
