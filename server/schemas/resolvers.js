@@ -13,19 +13,24 @@ const resolvers = {
             const login = await User.findOne({email});
             
             if (!login) {
-                throw new AuthentificationEffor('Account with this email found.');
+                throw new  AuthenticationError('Account with this email found.');
             }
 
-            const password = await login.correctPassword(password);
+            const cPassword = await login.correctPassword(password);
 
-            if (!password) {
+            if (!cPassword) {
                 throw new AuthentificationEffor('This password is incorrect.')
             }
 
             const token = signToken(login);
             return { token, login };
         },
-        addUser: async (parent, {username, email, password})
+        addUser: async (parent, args) => {
+            const user = await User.create(args);
+            const token = signToken(user);
+
+            return { token, user };
+        }
     },
 };
     
