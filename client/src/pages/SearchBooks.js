@@ -15,7 +15,7 @@ const SearchBooks = () => {
   // create state for holding our search field data
   const [searchInput, setSearchInput] = useState('');
   
-  const [saveBook, { error }] = useMutation(SAVE_BOOK);
+ 
   // create state to hold saved bookId values
   const [savedBookIds, setSavedBookIds] = useState(getSavedBookIds());
 
@@ -24,7 +24,7 @@ const SearchBooks = () => {
   useEffect(() => {
     return () => saveBookIds(savedBookIds);
   });
-
+  const [saveBook] = useMutation(SAVE_BOOK);
   // create method to search for books and set state on form submit
   const handleFormSubmit = async (event) => {
     event.preventDefault();

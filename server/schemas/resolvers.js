@@ -19,7 +19,7 @@ const resolvers = {
             const cPassword = await login.correctPassword(password);
 
             if (!cPassword) {
-                throw new AuthentificationEffor('This password is incorrect.')
+                throw new AuthentificationError('This password is incorrect.')
             }
 
             const token = signToken(login);
