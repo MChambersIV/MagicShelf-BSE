@@ -19,13 +19,13 @@ const resolvers = {
             const cPassword = await login.correctPassword(password);
 
             if (!cPassword) {
-                throw new AuthentificationError('This password is incorrect.')
+                throw new AuthenticationError('This password is incorrect.')
             }
 
             const token = signToken(login);
             return { token, login };
         },
-        addUser: async (parent, {username, email, password }) => {
+        addUser: async (_, {username, email, password }) => {
             const user = await User.create({ username, email, password });
             const token = signToken(user);
 
