@@ -4,17 +4,17 @@ This is a refactored search engine that was originally configured with restful A
 
 ##ScreenShots
 This is the page on load.
-![Front Page](./rm-images/gragh1.png)
+![Front Page](./rm-images/graph1.png)
 
 This is what the search results appearance will be, Dune in this example. (Great Book)
-![Search For Book](./rm-images/gragh2.png)
+![Search For Book](./rm-images/graph2.png)
 
 The user posesses the ability to sign up if they so choose.
-![Sign Up](./rm-images/gragh3.png)
+![Sign Up](./rm-images/graph3.png)
 
 With an account the user can save a book they've searched for.
-![Save Button.](./rm-images/gragh4.png)
-![Book Saved.](./rm-images/gragh5.png)
+![Save Button.](./rm-images/graph4.png)
+![Book Saved.](./rm-images/graph5.png)
 
 A user can look at all of their saved books with the option to remove saves.
 ![Book in Dashboard, option to delete](./rm-images/gragh6.png)
