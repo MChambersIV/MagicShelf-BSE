@@ -17,6 +17,6 @@ With an account the user can save a book they've searched for.
 ![Book Saved.](./rm-images/graph5.png)
 
 A user can look at all of their saved books with the option to remove saves.
-![Book in Dashboard, option to delete](./rm-images/gragh6.png)
+![Book in Dashboard, option to delete](./rm-images/graph6.png)
 
 Link to deployed site: https://whispering-gorge-60570.herokuapp.com/
